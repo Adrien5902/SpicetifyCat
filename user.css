@@ -1,0 +1,121 @@
+* {
+    --spice-main-elevated: rgba(0, 0, 0, 0.4)
+}
+
+.Root__top-container {
+    /* background-image: url("https://cdn.discordapp.com/attachments/1222266928085733478/1383174844262383687/032300085c3a63295d8c83a86d77d20f.png?ex=68512135&is=684fcfb5&hm=40aa4bb8112d91ad56baa5566d8f5498939d07e01df95716be584b80cb63b89f&"); */
+    background-image: url("https://github.com/Adrien5902/SpicetifyCat/blob/main/assets/background.png?raw=true");
+    background-size: cover;
+}
+
+.Root__top-container:has(#VideoPlayerCinema_ReactPortal) {
+    padding: 0;
+}
+
+/* Do not display background elements when fullscreen lyrics */
+#main:has(#VideoPlayerCinema_ReactPortal) {
+
+    .Root__main-view,
+    .Root__right-sidebar,
+    .Root__nav-bar {
+        display: none !important;
+    }
+
+    /* .Root__globalNav {
+        background: black !important;
+    } */
+}
+
+/* Do not display main view when expanded library */
+#main:has(.main-yourLibraryX-libraryRootlist > * > ul[role="treegrid"]) .Root__main-view {
+    display: none !important;
+}
+
+:has([data-overlayscrollbars-initialize="true"]):has(#VideoPlayerCinema_ReactPortal) {
+    outline: none !important;
+}
+
+.progress-bar__slider {
+    background-color: transparent !important;
+    background-image: url("https://www.nyan.cat/cats/original.gif");
+    background-size: cover;
+    height: 20px;
+    width: 32px;
+    box-shadow: none;
+    display: flex;
+}
+
+.x-progressBar-fillColor {
+    background-color: transparent !important;
+    background-image: linear-gradient(90deg,
+            rgba(255, 0, 0, 1) 0%,
+            rgba(255, 154, 0, 1) 10%,
+            rgba(208, 222, 33, 1) 20%,
+            rgba(79, 220, 74, 1) 30%,
+            rgba(63, 218, 216, 1) 40%,
+            rgba(47, 201, 226, 1) 50%,
+            rgba(28, 127, 238, 1) 60%,
+            rgba(95, 21, 242, 1) 70%,
+            rgba(186, 12, 248, 1) 80%,
+            rgba(251, 7, 217, 1) 90%,
+            rgba(255, 0, 0, 1) 100%);
+}
+
+.Root__globalNav,
+.Root__nav-bar,
+.main-entityHeader-backgroundColor,
+.main-entityHeader-container>*,
+.playlist-playlist-playlistContent,
+.main-actionBarBackground-background,
+.main-nowPlayingView-section>button,
+.lyrics-lyrics-background,
+.main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
+.Bdcf5g__Rug3TGqSdbiy,
+.YourLibraryX,
+#Desktop_PanelContainer_Id::before,
+.under-main-view *::after,
+.main-home-homeHeader,
+.main-view-container__scroll-node-child>*>*,
+.under-main-view>*>*:last-child,
+.artist-artistDiscography-headerContainer,
+.main-view-container__scroll-node-child>main>section>div:last-child,
+.search-searchCategory-contentArea::after,
+.main-nowPlayingView-contextItemInfo::before,
+.Box-group-naked-listRow-isInteractive-hasLeadingOrMedia-draggable-minBlockSize_56px,
+.lyrics-lyrics-container:first-child,
+:has(+.lyrics-lyrics-container),
+.vYn7fv3RB7DSzS3yofOR,
+.ZPBvrYZDkJvwrRfK_r5i,
+.vfrdRkOiUHFQZ8YxDEyK,
+[data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal) {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.view-homeShortcutsGrid-shortcut,
+.main-yourLibraryX-library,
+#Desktop_PanelContainer_Id,
+.Root__main-view,
+/* .main-nowPlayingView-section>button>div>*, */
+/* Filter tags */
+.ChipInnerComponent-sm {
+    background-color: var(--spice-main-elevated) !important;
+}
+
+.under-main-view>*>* {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+    position: absolute;
+}
+
+
+#Desktop_PanelContainer_Id {
+    border-radius: 8px;
+}
+
+[data-testid="control-button-skip-forward"] {
+    rotate: 90deg;
+}
+
+[data-testid="control-button-skip-back"] {
+    rotate: -90deg;
+}
