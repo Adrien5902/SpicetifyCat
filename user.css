@@ -3,8 +3,6 @@
 }
 
 .Root__top-container {
-    /* background-image: url("https://cdn.discordapp.com/attachments/1222266928085733478/1383174844262383687/032300085c3a63295d8c83a86d77d20f.png?ex=68512135&is=684fcfb5&hm=40aa4bb8112d91ad56baa5566d8f5498939d07e01df95716be584b80cb63b89f&"); */
-    background-image: url("https://github.com/Adrien5902/SpicetifyCat/blob/main/assets/background.png?raw=true");
     background-size: cover;
 }
 
@@ -15,7 +13,7 @@
 /* Do not display background elements when fullscreen lyrics */
 #main:has(#VideoPlayerCinema_ReactPortal) {
 
-    .Root__main-view,
+    & .Root__main-view,
     .Root__right-sidebar,
     .Root__nav-bar {
         display: none !important;
