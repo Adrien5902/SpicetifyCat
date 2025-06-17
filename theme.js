@@ -53,7 +53,6 @@ function changeSvgs(arr) {
     })
 
     for (const img of document.querySelectorAll('img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"]')) {
-      console.log(img);
       img.removeAttribute("srcset")
       img.setAttribute("src", "https://github.com/Adrien5902/SpicetifyCat/blob/main/assets/liked_songs.png?raw=true")
     }

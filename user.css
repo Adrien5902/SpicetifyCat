@@ -36,6 +36,7 @@
 }
 
 .progress-bar__slider {
+    transform: translate(-50%, -50%) !important;
     background-color: transparent !important;
     background-image: url("https://www.nyan.cat/cats/original.gif");
     background-size: cover;
@@ -96,7 +97,6 @@
 .main-yourLibraryX-library,
 #Desktop_PanelContainer_Id,
 .Root__main-view,
-/* .main-nowPlayingView-section>button>div>*, */
 /* Filter tags */
 .ChipInnerComponent-sm {
     background-color: var(--spice-main-elevated) !important;
