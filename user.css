@@ -60,9 +60,16 @@
             rgba(255, 0, 0, 1) 100%);
 }
 
+/* Global */
 .Root__globalNav,
+
+/* Top bar */
 .Root__nav-bar,
+
+/* Playlist top */
 .main-entityHeader-backgroundColor,
+
+
 .main-entityHeader-container>*,
 .playlist-playlist-playlistContent,
 .main-actionBarBackground-background,
@@ -70,29 +77,38 @@
 .lyrics-lyrics-background,
 .main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
+/* Sidebar left your library */
 .YourLibraryX,
+.main-yourLibraryX-library,
+
 #Desktop_PanelContainer_Id::before,
-.under-main-view *::after,
 .main-home-homeHeader,
 .main-view-container__scroll-node-child>*>*,
-.under-main-view>*>*:last-child,
 .artist-artistDiscography-headerContainer,
 .main-view-container__scroll-node-child>main>section>div:last-child,
 .search-searchCategory-contentArea::after,
 .main-nowPlayingView-contextItemInfo::before,
 .Box-group-naked-listRow-isInteractive-hasLeadingOrMedia-draggable-minBlockSize_56px,
+
+/* Artist page colored background */
+.main-view-container .before-scroll-node>*>:last-child,
+.main-view-container .before-scroll-node>*>:last-child:after,
+
+/* Fullscreen artist page on playing music */
+/* [data-overlayscrollbars-viewport="scrollbarHidden overflowXHidden overflowYScroll"]>*>*>*>*>*:first-child, */
+
+/* Fullscreen lyrics */
+[data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
 .lyrics-lyrics-container:first-child,
-:has(+.lyrics-lyrics-container),
-.vYn7fv3RB7DSzS3yofOR,
-.ZPBvrYZDkJvwrRfK_r5i,
-.vfrdRkOiUHFQZ8YxDEyK,
-[data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal) {
+:has(+.lyrics-lyrics-container)
+
+/* Remove bg */
+    {
     background-color: transparent !important;
     background-image: none !important;
 }
 
 .view-homeShortcutsGrid-shortcut,
-.main-yourLibraryX-library,
 #Desktop_PanelContainer_Id,
 .Root__main-view,
 /* Filter tags */
@@ -100,7 +116,8 @@
     background-color: var(--spice-main-elevated) !important;
 }
 
-.under-main-view>*>* {
+/* Artist page gradient image */
+.main-view-container .before-scroll-node>*>:first-child {
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
     position: absolute;
 }
@@ -110,6 +127,7 @@
     border-radius: 8px;
 }
 
+/* Rotate cat paw previous and next buttons */
 [data-testid="control-button-skip-forward"] {
     rotate: 90deg;
 }
