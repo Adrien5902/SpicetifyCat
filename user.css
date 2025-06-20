@@ -79,7 +79,6 @@
 .Bdcf5g__Rug3TGqSdbiy,
 /* Sidebar left your library */
 .YourLibraryX,
-.main-yourLibraryX-library,
 
 #Desktop_PanelContainer_Id::before,
 .main-home-homeHeader,
@@ -110,7 +109,9 @@
 
 .view-homeShortcutsGrid-shortcut,
 #Desktop_PanelContainer_Id,
+/* Sidebar left your library */
 .Root__main-view,
+.main-yourLibraryX-library,
 /* Filter tags */
 .ChipInnerComponent-sm {
     background-color: var(--spice-main-elevated) !important;
