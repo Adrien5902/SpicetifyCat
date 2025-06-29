@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Cat Theme",
+        "description": "A theme about cats.",
+        "preview": "preview.png",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "include": ["https://raw.githubusercontent.com/Adrien5902/SpicetifyCat/refs/heads/main/theme.js"],
+        "readme": "README.md",
+        "authors": [
+            { "name": "Adrien5902", "url": "https://github.com/Adrien5902" }
+        ],
+        "tags": ["cat"]
+    }
+]
