@@ -5,7 +5,7 @@
         "preview": "preview.png",
         "usercss": "user.css",
         "schemes": "color.ini",
-        "include": ["https://raw.githubusercontent.com/Adrien5902/SpicetifyCat/refs/heads/main/theme.js"],
+        "include": ["https://adrien5902.github.io/SpicetifyCat/theme.js"],
         "readme": "README.md",
         "authors": [
             { "name": "Adrien5902", "url": "https://github.com/Adrien5902" }
