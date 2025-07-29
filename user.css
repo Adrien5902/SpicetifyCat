@@ -73,10 +73,12 @@
 .main-entityHeader-container>*,
 .playlist-playlist-playlistContent,
 .main-actionBarBackground-background,
-.main-nowPlayingView-section>button,
+.Root__now-playing-bar>button,
 .lyrics-lyrics-background,
 .main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
+
+.Root__now-playing-bar,
 /* Sidebar left your library */
 .YourLibraryX,
 
@@ -99,7 +101,10 @@
 /* Fullscreen lyrics */
 [data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
 .lyrics-lyrics-container:first-child,
-:has(+.lyrics-lyrics-container)
+:has(+.lyrics-lyrics-container),
+
+/* Spicetify marketplace */
+.marketplace-header
 
 /* Remove bg */
     {
