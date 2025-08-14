@@ -98,6 +98,9 @@
 /* Fullscreen artist page on playing music */
 /* [data-overlayscrollbars-viewport="scrollbarHidden overflowXHidden overflowYScroll"]>*>*>*>*>*:first-child, */
 
+/* Right sidebar for queue */
+.Root__right-sidebar>*,
+
 /* Fullscreen lyrics */
 [data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
 .lyrics-lyrics-container:first-child,
