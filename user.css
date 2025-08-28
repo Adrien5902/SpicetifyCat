@@ -66,13 +66,14 @@
 /* Top bar */
 .Root__nav-bar,
 
-/* Playlist top */
-.main-entityHeader-backgroundColor,
-
-
 .main-entityHeader-container>*,
 .playlist-playlist-playlistContent,
+
+/* Playlist colored background */
+.main-entityHeader-backgroundColor,
+.playlist-playlist-actionBarBackground-background,
 .main-actionBarBackground-background,
+
 .Root__now-playing-bar>button,
 .lyrics-lyrics-background,
 .main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
