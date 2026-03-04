@@ -84,7 +84,7 @@
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
-[role="presentation"],
+.main-yourLibraryX-libraryRootlist [role="presentation"],
 .main-yourLibraryX-libraryRootlist [aria-rowindex="1"],
 
 #Desktop_PanelContainer_Id::before,
