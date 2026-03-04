@@ -84,6 +84,8 @@
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
+[role="presentation"],
+.main-yourLibraryX-libraryRootlist [aria-rowindex="1"],
 
 #Desktop_PanelContainer_Id::before,
 .main-home-homeHeader,
@@ -146,4 +148,8 @@
 
 [data-testid="control-button-skip-back"] {
     rotate: -90deg;
+}
+
+[data-tippy-root] form {
+    --background-elevated-base: unset;
 }
