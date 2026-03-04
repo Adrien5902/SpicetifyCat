@@ -26,7 +26,7 @@
 }
 
 /* Do not display main view when expanded library */
-#main:has(.main-yourLibraryX-libraryRootlist > * > ul[role="treegrid"]) .Root__main-view {
+#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar)) .Root__main-view {
     display: none !important;
 }
 
