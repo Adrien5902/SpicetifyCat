@@ -34,7 +34,7 @@
     outline: none !important;
 }
 
-.progress-bar__slider {
+.x-progressBar-handle {
     transform: translate(-50%, -50%) !important;
     background-color: transparent !important;
     background-image: url("https://www.nyan.cat/cats/original.gif");
@@ -45,7 +45,7 @@
     display: flex;
 }
 
-.x-progressBar-fillColor {
+.x-progressBar-foreground {
     background-color: transparent !important;
     background-image: linear-gradient(90deg,
             rgba(255, 0, 0, 1) 0%,
