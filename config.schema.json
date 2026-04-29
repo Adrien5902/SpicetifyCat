@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://adrien5902.github.io/SpicetifyCat/config.schema.json",
+    "type": "object",
+    "properties": {
+        "colors": {
+            "type": "object",
+            "properties": {
+                "button": { "$ref": "#/$defs/hexColor" },
+                "button-active": { "$ref": "#/$defs/hexColor" }
+            },
+            "required": ["button", "button-active"]
+        },
+        "liked_songs_icon": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "pattern": "image"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string",
+                            "pattern": "gradient|monochrome"
+                        },
+                        "color": { "$ref": "#/$defs/hexColor" },
+                        "colors": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {"$ref": "#/$defs/hexColor"}
+                        }
+                    },
+                    "required": [
+                        "kind"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "colors"
+    ],
+    "$defs": {
+        "hexColor": {
+            "type": "string",
+            "pattern": "^#(?:[0-9a-fA-F]{6})$"
+        }
+    }
+}
