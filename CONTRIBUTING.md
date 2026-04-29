@@ -2,9 +2,14 @@
 If you encounter some bug or wanna suggest a feature, feel free to open a PR or an Issue, or you could contact me on Discord
 
 # 🎨 Creating your own theme
-> [!WARNING]
-> This is currently WIP and not possible at the moment
-
-Currently, if you wish to change the background, you could the theme [manually](./README.md#️-manual), and edit [this line](
-https://github.com/Adrien5902/SpicetifyCat/blob/cd3a9498508407aaee494130dc63044022ae9011/theme.js#L81),
-however you won't receive updates automatically.
+1. Fork the repo
+2. Add your custom images under `themes/YOUR_THEME_NAME/background.png` and `themes/YOUR_THEME_NAME/liked_songs.png` (optional will default to the Purple one if not set)
+3. Edit color.ini
+    and make a new section looking like this
+    ```ini
+    ; color.ini
+    [YOUR_THEME_NAME]
+    ; each field should be six digits hex colors without # (e.g. b693ce)
+    button-active = ______ ; color of the buttons in the app
+    ```
+4. Take a screenshot, place it under `themes/YOUR_THEME_NAME/preview.png` and add it to [THEMES.md](./THEMES.md) for others to see

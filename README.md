@@ -1,8 +1,14 @@
 # Spicetify Cat
-🐱Cat theme for spotify 🎶
+🐱 Cat theme for spotify 🎶
 
->Preview :
-> ![image](preview.png)
+This spicetify theme supports sub-themes with custom wallpapers and colors (and maybe more in the future)
+
+> Preview of the default one:
+> ![image](./themes/Purple/preview.png)
+
+👀 To look at all the others themes see [THEMES.md](./THEMES.md)
+
+🖌️ To make your own see [Contributing/Creating your own theme](./CONTRIBUTING.md#-creating-your-own-theme)
 
 # 🔧 Installation
 ## ⚙️ Automatic
