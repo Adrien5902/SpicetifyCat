@@ -18,4 +18,4 @@ Install from [marketplace](https://github.com/spicetify/marketplace)
 5. Run `spicetify apply`
 6. Enjoy your theme 😸
 
-If you encounter any issues feel free to report it in the [issues tab](https://github.com/Adrien5902/SpicetifyCat/issues)
+If you encounter any issues feel free to report it in the [issues tab](https://github.com/Adrien5902/SpicetifyCat/issues), see [Contributing guidelines](./CONTRIBUTING.md#-issues-and-pr)
