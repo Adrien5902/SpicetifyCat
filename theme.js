@@ -112,6 +112,4 @@ changeSvgs([
 ])
 
 let theme = getTheme()
-waitForElement([likedSongsImageSelector], () => {
-    refreshTheme(theme)
-})
+refreshTheme(theme)
