@@ -18,11 +18,11 @@ function waitForElement(els, func, timeout = 100) {
 
 function refreshTheme(theme) {
     for (const img of document.querySelectorAll('img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"]')) {
-        img.setAttribute("srcset", `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true, https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${DEFAULT_THEME}/liked_songs.png?raw=true`)
+        img.setAttribute("srcset", `${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`)}, ${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${DEFAULT_THEME}/liked_songs.png?raw=true`)}`)
     }
 
     waitForElement([".Root__top-container"], ([el]) => {
-        el.style.backgroundImage = `url(https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true)`;
+        el.style.backgroundImage = `url(${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`)})`;
     })
 }
 
