@@ -84,11 +84,16 @@ function changeSvgs(arr) {
 
     const observer = new MutationObserver(() => {
         updateSVGs();
+        const newTheme = getTheme();
+        if (newTheme != theme) {
+            refreshTheme(newTheme)
+            theme = newTheme
+        }
     });
 
     observer.observe(document.body, {
         childList: true,
-        subtree: true
+        subtree: true,
     });
 
     updateSVGs();
@@ -100,11 +105,4 @@ changeSvgs([
 ])
 
 let theme = getTheme()
-window.addEventListener("storage", (_) => {
-    const newTheme = getTheme();
-    if (newTheme != theme) {
-        refreshTheme(newTheme)
-        theme = newTheme
-    }
-})
 refreshTheme(theme)
