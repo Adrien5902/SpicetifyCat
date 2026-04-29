@@ -3,6 +3,7 @@ function getTheme() {
     // If no color_scheme is set it should return "" which evaluates to false in JS
     return Spicetify?.Config?.color_scheme || DEFAULT_THEME;
 }
+const likedSongsImageSelector = 'img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"]';
 
 /**
  * @param {(els: HTMLElement[]) => void} func 
@@ -17,13 +18,18 @@ function waitForElement(els, func, timeout = 100) {
 }
 
 function refreshTheme(theme) {
-    for (const img of document.querySelectorAll('img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"]')) {
-        img.setAttribute("srcset", `${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`)}, ${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${DEFAULT_THEME}/liked_songs.png?raw=true`)}`)
-    }
+    refreshLikedSongsImage(theme)
 
     waitForElement([".Root__top-container"], ([el]) => {
         el.style.backgroundImage = `url(${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`)})`;
     })
+}
+
+function refreshLikedSongsImage(theme) {
+    for (const img of document.querySelectorAll(likedSongsImageSelector)) {
+        img.setAttribute("src", `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`)
+        img.removeAttribute("srcset")
+    }
 }
 
 
@@ -84,6 +90,7 @@ function changeSvgs(arr) {
 
     const observer = new MutationObserver(() => {
         updateSVGs();
+        refreshLikedSongsImage(theme)
         const newTheme = getTheme();
         if (newTheme != theme) {
             refreshTheme(newTheme)
@@ -105,4 +112,6 @@ changeSvgs([
 ])
 
 let theme = getTheme()
-refreshTheme(theme)
+waitForElement([likedSongsImageSelector], () => {
+    refreshTheme(theme)
+})
