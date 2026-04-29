@@ -10,6 +10,7 @@ If you encounter some bug or wanna suggest a feature, feel free to open a PR or 
     ; color.ini
     [YOUR_THEME_NAME]
     ; each field should be six digits hex colors without # (e.g. b693ce)
-    button-active = ______ ; color of the buttons in the app
+    button = ______ ; color of the buttons in the app
+    button-active = ______ ; kinda the same
     ```
 4. Take a screenshot, place it under `themes/YOUR_THEME_NAME/preview.png` and add it to [THEMES.md](./THEMES.md) for others to see
