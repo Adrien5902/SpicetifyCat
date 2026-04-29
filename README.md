@@ -5,13 +5,15 @@
 > ![image](preview.png)
 
 # 🔧 Installation
-## ⚙ Automatic
+## ⚙️ Automatic
 Install from [marketplace](https://github.com/spicetify/marketplace)
 
-## 🖐 Manual
+## 🖐️ Manual
 1. Make sure [spicetify](https://spicetify.app/) is installed
 2. Download [source code zip](https://github.com/Adrien5902/SpicetifyCat/archive/refs/heads/main.zip) or clone the repo
-3. Place it (unzipped) in spicetify themes's directory `USER/Appdata/Local/spicetify/Themes` on Windows, `$HOME/.config/spicetify/Themes` on Linux
+3. Place it (unzipped) in spicetify themes's directory
+  - `USER/Appdata/Local/spicetify/Themes` on Windows 🪟
+  - `$HOME/.config/spicetify/Themes` on Linux 🐧
 4. Run `spicetify config current_theme SpicetifyCat-main` (or the name of the dir you chose when unzipping)
 5. Run `spicetify apply`
 6. Enjoy your theme 😸
