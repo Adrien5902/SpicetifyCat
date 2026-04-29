@@ -6,9 +6,9 @@ This spicetify theme supports sub-themes with custom wallpapers and colors (and 
 > Preview of the default one:
 > ![image](./themes/Purple/preview.png)
 
-to look at all the others themes see [THEMES.md](./THEMES.md)
+👀 To look at all the others themes see [THEMES.md](./THEMES.md)
 
-to make your own see [Contributing/Creating your own theme](./CONTRIBUTING.md#-creating-your-own-theme)
+🖌️ To make your own see [Contributing/Creating your own theme](./CONTRIBUTING.md#-creating-your-own-theme)
 
 # 🔧 Installation
 ## ⚙️ Automatic
