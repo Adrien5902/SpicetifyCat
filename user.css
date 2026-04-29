@@ -5,6 +5,7 @@
 .Root__top-container {
     background-color: unset !important;
     background-size: cover;
+    background-position: center;
 }
 
 .Root__top-container:has(#VideoPlayerCinema_ReactPortal) {
