@@ -2,7 +2,7 @@
     {
         "name": "Cat Theme",
         "description": "A theme about cats.",
-        "preview": "preview.png",
+        "preview": "themes/Purple/preview.png",
         "usercss": "user.css",
         "schemes": "color.ini",
         "include": ["https://adrien5902.github.io/SpicetifyCat/theme.js"],
