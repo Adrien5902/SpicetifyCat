@@ -3,8 +3,10 @@
 
 This spicetify theme supports sub-themes with custom wallpapers and colors (and maybe more in the future)
 
-> Preview of the default one:
-> ![image](./themes/Purple/preview.png)
+> Preview :
+> | ![](./themes/Purple/preview.png)  | ![](./themes/Summer_Sky/preview.png) |
+> | --------------------------------- | ------------------------------------ |
+> | ![](./themes/NyanCat/preview.png) | ![](./themes/Stray/preview.png)      |
 
 👀 To look at all the others themes see [THEMES.md](./THEMES.md)
 
