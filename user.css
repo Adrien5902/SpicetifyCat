@@ -1,5 +1,5 @@
 * {
-    --spice-main-elevated: rgba(0, 0, 0, 0.4)
+    --spice-main-elevated: rgba(0, 0, 0, 0.4);
 }
 
 .Root__top-container {
@@ -14,7 +14,6 @@
 
 /* Do not display background elements when fullscreen lyrics */
 #main:has(#VideoPlayerCinema_ReactPortal) {
-
     & .Root__main-view,
     .Root__right-sidebar,
     .Root__nav-bar {
@@ -27,11 +26,14 @@
 }
 
 /* Do not display main view when expanded library */
-#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar)) .Root__main-view {
+#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar))
+.Root__main-view {
     display: none !important;
 }
 
-:has([data-overlayscrollbars-initialize="true"]):has(#VideoPlayerCinema_ReactPortal) {
+:has([data-overlayscrollbars-initialize="true"]):has(
+    #VideoPlayerCinema_ReactPortal
+) {
     outline: none !important;
 }
 
@@ -51,77 +53,74 @@
 .x-progressBar-fillColor,
 .x-progressBar-foreground {
     background-color: transparent !important;
-    background-image: linear-gradient(90deg,
-            rgba(255, 0, 0, 1) 0%,
-            rgba(255, 154, 0, 1) 10%,
-            rgba(208, 222, 33, 1) 20%,
-            rgba(79, 220, 74, 1) 30%,
-            rgba(63, 218, 216, 1) 40%,
-            rgba(47, 201, 226, 1) 50%,
-            rgba(28, 127, 238, 1) 60%,
-            rgba(95, 21, 242, 1) 70%,
-            rgba(186, 12, 248, 1) 80%,
-            rgba(251, 7, 217, 1) 90%,
-            rgba(255, 0, 0, 1) 100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
 }
 
 /* Global */
 .Root__globalNav,
-
 /* Top bar */
 .Root__nav-bar,
-
-.main-entityHeader-container>*,
+.main-entityHeader-container > *,
 .playlist-playlist-playlistContent,
-
 /* Playlist colored background */
 .main-entityHeader-backgroundColor,
 .playlist-playlist-actionBarBackground-background,
 .main-actionBarBackground-background,
-
 .lyrics-lyrics-background,
-.main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
+.main-view-container__scroll-node-child
+    > main
+    > section
+    > div
+    > div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
-
 /* Bottom bar of the app */
 .Root__now-playing-bar,
-.Root__now-playing-bar>button,
-
+.Root__now-playing-bar > button,
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
 .main-yourLibraryX-libraryRootlist [role="presentation"],
 .main-yourLibraryX-libraryRootlist [aria-rowindex="1"],
-
 #Desktop_PanelContainer_Id::before,
 .main-home-homeHeader,
-.main-view-container__scroll-node-child>*>*,
+.main-view-container__scroll-node-child > * > *,
 .artist-artistDiscography-headerContainer,
-.main-view-container__scroll-node-child>main>section>div:last-child,
+.main-view-container__scroll-node-child > main > section > div:last-child,
 .search-searchCategory-contentArea::after,
 .main-nowPlayingView-contextItemInfo::before,
 .Box-group-naked-listRow-isInteractive-hasLeadingOrMedia-draggable-minBlockSize_56px,
-
 /* Artist page colored background */
-.main-view-container .before-scroll-node>*>:last-child,
-.main-view-container .before-scroll-node>*>:last-child:after,
-
+    .main-view-container
+    .before-scroll-node
+    > *
+    > :last-child,
+.main-view-container .before-scroll-node > * > :last-child:after,
 /* Fullscreen artist page on playing music */
 /* [data-overlayscrollbars-viewport="scrollbarHidden overflowXHidden overflowYScroll"]>*>*>*>*>*:first-child, */
 
 /* Right sidebar for queue */
-.Root__right-sidebar>*,
-
+.Root__right-sidebar > *,
 /* Fullscreen lyrics */
 [data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
 .lyrics-lyrics-container:first-child,
-:has(+.lyrics-lyrics-container),
-
+:has(+ .lyrics-lyrics-container),
 /* Spicetify marketplace */
 .marketplace-header
 
-/* Remove bg */
-    {
+/* Remove bg */ {
     background-color: transparent !important;
     background-image: none !important;
 }
@@ -138,11 +137,14 @@
 }
 
 /* Artist page gradient image */
-.main-view-container .before-scroll-node>*>:first-child {
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+.main-view-container .before-scroll-node > * > :first-child {
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+    );
     position: absolute;
 }
-
 
 .main-nowPlayingBar-nowPlayingBar,
 #Desktop_PanelContainer_Id {
@@ -161,4 +163,3 @@
 [data-tippy-root] form {
     --background-elevated-base: unset;
 }
-

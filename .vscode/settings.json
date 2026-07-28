@@ -1,9 +1,7 @@
 {
     "json.schemas": [
         {
-            "fileMatch": [
-                "/themes/*/config.json"
-            ],
+            "fileMatch": ["/themes/*/config.json"],
             "url": "./config.schema.json"
         }
     ]
