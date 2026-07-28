@@ -79,12 +79,14 @@
 .playlist-playlist-actionBarBackground-background,
 .main-actionBarBackground-background,
 
-.Root__now-playing-bar>button,
 .lyrics-lyrics-background,
 .main-view-container__scroll-node-child>main>section>div>div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
 
+/* Bottom bar of the app */
 .Root__now-playing-bar,
+.Root__now-playing-bar>button,
+
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
@@ -124,6 +126,7 @@
     background-image: none !important;
 }
 
+.main-nowPlayingBar-nowPlayingBar,
 .view-homeShortcutsGrid-shortcut,
 #Desktop_PanelContainer_Id,
 /* Sidebar left your library */
@@ -141,6 +144,7 @@
 }
 
 
+.main-nowPlayingBar-nowPlayingBar,
 #Desktop_PanelContainer_Id {
     border-radius: 8px;
 }
@@ -157,3 +161,4 @@
 [data-tippy-root] form {
     --background-elevated-base: unset;
 }
+
