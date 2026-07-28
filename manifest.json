@@ -1,7 +1,7 @@
 [
     {
         "name": "Cat Theme",
-        "description": "A theme about cats.",
+        "description": "A theme about cats with custom community sub-themes",
         "preview": "themes/Purple/preview.png",
         "usercss": "user.css",
         "schemes": "color.ini",
@@ -13,6 +13,6 @@
                 "url": "https://github.com/Adrien5902"
             }
         ],
-        "tags": ["cat"]
+        "tags": ["cat", "sub-themes", "customizable"]
     }
 ]
