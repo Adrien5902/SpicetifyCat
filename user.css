@@ -2,40 +2,19 @@
     --spice-main-elevated: rgba(0, 0, 0, 0.4);
 }
 
+/* --------------------------------- */
+/* Main background with custom image */
+/* --------------------------------- */
+
 .Root__top-container {
     background-color: unset !important;
     background-size: cover;
     background-position: center;
 }
 
-.Root__top-container:has(#VideoPlayerCinema_ReactPortal) {
-    padding: 0;
-}
-
-/* Do not display background elements when fullscreen lyrics */
-#main:has(#VideoPlayerCinema_ReactPortal) {
-    & .Root__main-view,
-    .Root__right-sidebar,
-    .Root__nav-bar {
-        display: none !important;
-    }
-
-    /* .Root__globalNav {
-        background: black !important;
-    } */
-}
-
-/* Do not display main view when expanded library */
-#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar))
-.Root__main-view {
-    display: none !important;
-}
-
-:has([data-overlayscrollbars-initialize="true"]):has(
-    #VideoPlayerCinema_ReactPortal
-) {
-    outline: none !important;
-}
+/* ------------- */
+/* Nyan Cat bars */
+/* ------------- */
 
 .progress-bar__slider,
 [data-testid="progress-bar-handle"],
@@ -68,6 +47,10 @@
         rgba(255, 0, 0, 1) 100%
     );
 }
+
+/* ---------------------- */
+/* Transparent Background */
+/* ---------------------- */
 
 /* Global */
 .Root__globalNav,
@@ -113,6 +96,10 @@
 
 /* Right sidebar for queue */
 .Root__right-sidebar > *,
+
+/* Right sidebar collapsed */
+.Root__right-sidebar-overlay,
+
 /* Fullscreen lyrics */
 [data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
 .lyrics-lyrics-container:first-child,
@@ -125,18 +112,39 @@
     background-image: none !important;
 }
 
+/* ---------------------------- */
+/* See through black background */
+/* ---------------------------- */
+
 .main-nowPlayingBar-nowPlayingBar,
 .view-homeShortcutsGrid-shortcut,
 #Desktop_PanelContainer_Id,
+
 /* Sidebar left your library */
 .Root__main-view,
 .main-yourLibraryX-library,
+
+/* Right sidebar collapsed */
+.Root__right-sidebar-fauxMainViewEnd > * 
+
 /* Filter tags */
 .ChipInnerComponent-sm {
     background-color: var(--spice-main-elevated) !important;
 }
 
-/* Artist page gradient image */
+/* --------------- */
+/* Rounded corners */
+/* --------------- */
+
+.main-nowPlayingBar-nowPlayingBar,
+#Desktop_PanelContainer_Id {
+    border-radius: 8px;
+}
+
+/* -------------------------- */
+/* Artist page image gradient */
+/* -------------------------- */
+
 .main-view-container .before-scroll-node > * > :first-child {
     mask-image: linear-gradient(
         to bottom,
@@ -144,11 +152,6 @@
         rgba(0, 0, 0, 0)
     );
     position: absolute;
-}
-
-.main-nowPlayingBar-nowPlayingBar,
-#Desktop_PanelContainer_Id {
-    border-radius: 8px;
 }
 
 /* Rotate cat paw previous and next buttons */
@@ -160,6 +163,51 @@
     rotate: -90deg;
 }
 
+
+/* ------------ */
+/* No Opacctity */
+/* ------------ */
+
+/* Right sidebar collapsed */
+.Root__right-sidebar-collapsed
+.Root__right-sidebar-peekContent[aria-hidden="true"] {
+    opacity: 0;
+}
+
+
+/* ---- */
+/* MISC */
+/* ---- */
+
 [data-tippy-root] form {
     --background-elevated-base: unset;
+}
+
+.Root__top-container:has(#VideoPlayerCinema_ReactPortal) {
+    padding: 0;
+}
+
+/* Do not display background elements when fullscreen lyrics */
+#main:has(#VideoPlayerCinema_ReactPortal) {
+    & .Root__main-view,
+    .Root__right-sidebar,
+    .Root__nav-bar {
+        display: none !important;
+    }
+
+    /* .Root__globalNav {
+        background: black !important;
+    } */
+}
+
+/* Do not display main view when expanded library */
+#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar))
+.Root__main-view {
+    display: none !important;
+}
+
+:has([data-overlayscrollbars-initialize="true"]):has(
+    #VideoPlayerCinema_ReactPortal
+) {
+    outline: none !important;
 }
