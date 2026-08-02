@@ -69,9 +69,11 @@
     > div
     > div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
+
 /* Bottom bar of the app */
 .Root__now-playing-bar,
 .Root__now-playing-bar > button,
+
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
@@ -98,7 +100,8 @@
 .Root__right-sidebar > *,
 
 /* Right sidebar collapsed */
-.Root__right-sidebar-overlay,
+.Root__right-sidebar-fauxMainViewEnd > *,
+.SC_eWQl28srvyLED > *,
 
 /* Fullscreen lyrics */
 [data-overlayscrollbars-initialize="true"]:has(#VideoPlayerCinema_ReactPortal),
@@ -119,13 +122,13 @@
 .main-nowPlayingBar-nowPlayingBar,
 .view-homeShortcutsGrid-shortcut,
 #Desktop_PanelContainer_Id,
-
 /* Sidebar left your library */
 .Root__main-view,
 .main-yourLibraryX-library,
 
 /* Right sidebar collapsed */
-.Root__right-sidebar-fauxMainViewEnd > * 
+.Root__right-sidebar-overlay,
+.wJiY1vDfuci2a4db,
 
 /* Filter tags */
 .ChipInnerComponent-sm {
@@ -163,17 +166,16 @@
     rotate: -90deg;
 }
 
-
 /* ------------ */
 /* No Opacctity */
 /* ------------ */
 
 /* Right sidebar collapsed */
 .Root__right-sidebar-collapsed
-.Root__right-sidebar-peekContent[aria-hidden="true"] {
+.Root__right-sidebar-peekContent[aria-hidden="true"],
+.fEThIghNSPAx5Xs3 .a_fKt7xvd8od_kEb[aria-hidden="true"] {
     opacity: 0;
 }
-
 
 /* ---- */
 /* MISC */
