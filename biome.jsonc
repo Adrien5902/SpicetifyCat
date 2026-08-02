@@ -1,3 +1,10 @@
 {
-    "formatter": { "indentWidth": 4, "indentStyle": "space" }
+    "formatter": { "indentWidth": 4, "indentStyle": "space" },
+    "linter": {
+        "rules": {
+            "complexity": {
+                "noImportantStyles": "off"
+            }
+        }
+    }
 }
