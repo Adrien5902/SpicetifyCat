@@ -18,6 +18,9 @@ function getTheme() {
     return Spicetify?.Config?.color_scheme || DEFAULT_THEME;
 }
 
+const REPO_URL = "https://github.com/Adrien5902/SpicetifyCat"
+const RAW_FILES_URL = `${REPO_URL}/blob/main`;
+
 const likedSongsImageSelectors = [
     'img[src="https://misc.scdn.co/liked-songs/liked-songs-300.png"]',
     'img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"]',
@@ -37,10 +40,11 @@ function waitForElement(els, func, timeout = 100) {
 }
 
 function refreshTheme(theme) {
+    document.body.classList.add(`color_scheme_${theme}`)
     refreshLikedSongsImage(theme);
 
     waitForElement([".Root__top-container"], ([el]) => {
-        el.style.backgroundImage = `url(${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`)})`;
+        el.style.backgroundImage = `url(${encodeURI(`${RAW_FILES_URL}/themes/${theme}/background.png?raw=true`)})`;
     });
 }
 
@@ -49,7 +53,7 @@ function refreshLikedSongsImage(theme) {
         for (const img of document.querySelectorAll(selector)) {
             img.setAttribute(
                 "src",
-                `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`,
+                `${RAW_FILES_URL}/themes/${theme}/liked_songs.png?raw=true`,
             );
             img.removeAttribute("srcset");
         }
