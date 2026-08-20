@@ -58,7 +58,7 @@ fn compile_themes(css_output: &mut String) -> Result<()> {
 
             css_output.push_str(&format!("\n/* BEGIN {theme_name} THEME CSS */\n"));
             css_output.push_str(&css_code);
-            css_output.push_str(&format!("\n/* END {theme_name} THEME CSS */"));
+            css_output.push_str(&format!("\n/* END {theme_name} THEME CSS */\n"));
 
             log!("  Compiled {theme_name} successfully");
         } else {
@@ -70,9 +70,11 @@ fn compile_themes(css_output: &mut String) -> Result<()> {
 }
 
 fn push_global(css_output: &mut String) -> Result<()> {
+    log!("Compiling global");
     let path = "global.css";
     let global_css = fs::read_to_string(path).with_context(|| path)?;
     css_output.push_str(&global_css);
+    log!("Compiled global successfully\n");
     Ok(())
 }
 
