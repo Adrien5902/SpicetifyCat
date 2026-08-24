@@ -1,6 +1,5 @@
 use color_eyre::eyre::{Context, Result};
 use std::fs;
-use tree_sitter::Parser;
 
 const DEBUG: bool = true;
 macro_rules! log {
@@ -28,45 +27,34 @@ fn compile_themes(css_output: &mut String) -> Result<()> {
             continue;
         }
 
-        let mut css_code = fs::read_to_string(&css_path)
+        let css_code = fs::read_to_string(&css_path)
             .with_context(|| theme_name.clone())
             .with_context(|| css_path.to_str().unwrap().to_owned())?;
-        let mut parser = Parser::new();
-        parser.set_language(&tree_sitter_css::LANGUAGE.into())?;
 
-        let mut positions = Vec::new();
+        let theme_predicate_selector = format!("body.color_scheme_{theme_name}");
+        css_output.push_str(&format!(
+            "\n/* BEGIN {theme_name} THEME CSS */\n{theme_predicate_selector} {}\n",
+            "{"
+        ));
+        css_output.push_str(&ident(&css_code, "    "));
+        css_output.push_str(&format!("\n{}\n/* END {theme_name} THEME CSS */\n", "}"));
 
-        if let Some(tree) = parser.parse(&css_code, None) {
-            for child in tree.root_node().named_children(&mut tree.walk()) {
-                if child.grammar_name() != "rule_set" {
-                    continue;
-                }
-
-                if let Some(selectors) = child.child(0)
-                    && selectors.grammar_name() == "selectors"
-                {
-                    for selector in selectors.named_children(&mut tree.walk()) {
-                        positions.push(selector.start_byte());
-                    }
-                }
-            }
-
-            let theme_predicate = format!("body.color_scheme_{theme_name} ");
-            for pos in positions.into_iter().rev() {
-                css_code.insert_str(pos, &theme_predicate);
-            }
-
-            css_output.push_str(&format!("\n/* BEGIN {theme_name} THEME CSS */\n"));
-            css_output.push_str(&css_code);
-            css_output.push_str(&format!("\n/* END {theme_name} THEME CSS */\n"));
-
-            log!("  Compiled {theme_name} successfully");
-        } else {
-            log!("  Empty css file for {theme_name} skipping")
-        }
+        log!("  Compiled {theme_name} successfully");
     }
 
     Ok(())
+}
+
+fn ident(s: &str, ident: &str) -> String {
+    s.lines()
+        .map(|line| {
+            if line.is_empty() {
+                String::from("\n")
+            } else {
+                format!("\n{ident}{line}")
+            }
+        })
+        .collect()
 }
 
 fn push_global(css_output: &mut String) -> Result<()> {

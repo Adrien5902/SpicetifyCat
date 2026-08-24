@@ -5,5 +5,3 @@ edition = "2024"
 
 [dependencies]
 color-eyre = "0.6.5"
-tree-sitter = "0.26.12"
-tree-sitter-css = "0.25.0"
