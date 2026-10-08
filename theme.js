@@ -39,18 +39,17 @@ function waitForElement(els, func, timeout = 100) {
 function refreshTheme(theme) {
     refreshLikedSongsImage(theme);
 
+    const backgroundImageUrl = `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`;
     waitForElement([".Root__top-container"], ([el]) => {
-        el.style.backgroundImage = `url(${encodeURI(`https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`)})`;
+        el.style.backgroundImage = `url(${encodeURI(backgroundImageUrl)})`;
     });
 }
 
 function refreshLikedSongsImage(theme) {
+    const likedSongsImageUrl = `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`;
     for (const selector of likedSongsImageSelectors) {
         for (const img of document.querySelectorAll(selector)) {
-            img.setAttribute(
-                "src",
-                `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/liked_songs.png?raw=true`,
-            );
+            img.setAttribute("src", likedSongsImageUrl);
             img.removeAttribute("srcset");
         }
     }
