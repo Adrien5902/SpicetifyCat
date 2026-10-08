@@ -6,6 +6,7 @@
 /* Main background with custom image */
 /* --------------------------------- */
 
+.Root,
 .Root__top-container {
     background-color: unset !important;
     background-size: cover;
@@ -29,6 +30,7 @@
     display: flex;
 }
 
+.aZtKYi6r4EG1_WHGpmn9,
 .x-progressBar-fillColor,
 .x-progressBar-foreground {
     background-color: transparent !important;
@@ -54,12 +56,19 @@
 
 /* Global */
 .Root__globalNav,
+.global-nav > *,
 /* Top bar */
 .Root__nav-bar,
+#global-nav-bar,
+
 .main-entityHeader-container > *,
 .playlist-playlist-playlistContent,
+
 /* Playlist colored background */
 .main-entityHeader-backgroundColor,
+._ddPhxHdxmpT13IbjTmr,
+.QqprhKqwqIsC3c9SIKOE,
+.sxMpFt17cJVTesE9u6fX,
 .playlist-playlist-actionBarBackground-background,
 .main-actionBarBackground-background,
 .lyrics-lyrics-background,
@@ -69,23 +78,31 @@
     > div
     > div:nth-child(2),
 .Bdcf5g__Rug3TGqSdbiy,
+[data-testid="playlist-page"] [data-testid="entity-header"] > *,
 
 /* Bottom bar of the app */
 .Root__now-playing-bar,
+:has(>[data-testid="now-playing-bar"]),
 .Root__now-playing-bar > button,
+:has(>[data-testid="now-playing-bar"]) > button,
 
 /* Sidebar left your library */
 #Desktop_LeftSidebar_Id,
 .YourLibraryX,
 .main-yourLibraryX-libraryRootlist [role="presentation"],
 .main-yourLibraryX-libraryRootlist [aria-rowindex="1"],
+
 #Desktop_PanelContainer_Id::before,
 .main-home-homeHeader,
 .main-view-container__scroll-node-child > * > *,
 .artist-artistDiscography-headerContainer,
 .main-view-container__scroll-node-child > main > section > div:last-child,
 .search-searchCategory-contentArea::after,
+
+/* Small black gradient on rhs video player */
 .main-nowPlayingView-contextItemInfo::before,
+.f8pB2G3XUFXNNPQ_Ppxb:before,
+
 .Box-group-naked-listRow-isInteractive-hasLeadingOrMedia-draggable-minBlockSize_56px,
 /* Artist page colored background */
     .main-view-container
@@ -93,11 +110,15 @@
     > *
     > :last-child,
 .main-view-container .before-scroll-node > * > :last-child:after,
+.oCSWtOAH_CgjIsi_H_PS,
+[data-testid="overscroll-background"],
+
 /* Fullscreen artist page on playing music */
 /* [data-overlayscrollbars-viewport="scrollbarHidden overflowXHidden overflowYScroll"]>*>*>*>*>*:first-child, */
 
 /* Right sidebar for queue */
 .Root__right-sidebar > *,
+.iZl4hCeW2xyCCK5nSCCL,
 
 /* Right sidebar collapsed */
 .Root__right-sidebar-fauxMainViewEnd > *,
@@ -119,16 +140,24 @@
 /* See through black background */
 /* ---------------------------- */
 
+/* Bottom now Playing bar */
 .main-nowPlayingBar-nowPlayingBar,
+[data-testid="now-playing-bar"],
+
 .view-homeShortcutsGrid-shortcut,
 #Desktop_PanelContainer_Id,
-/* Sidebar left your library */
+/* Center main view in the middle of the screen */
 .Root__main-view,
+#main-view,
+
+/* Sidebar left your library */
+#Desktop_LeftSidebar_Id > * > *,
 .main-yourLibraryX-library,
 
 /* Right sidebar collapsed */
 .Root__right-sidebar-overlay,
 .wJiY1vDfuci2a4db,
+.Clgyk1V8iQGkU1G6m5Lo,
 
 /* Filter tags */
 .ChipInnerComponent-sm {
@@ -140,6 +169,7 @@
 /* --------------- */
 
 .main-nowPlayingBar-nowPlayingBar,
+[data-testid="now-playing-bar"],
 #Desktop_PanelContainer_Id {
     border-radius: 8px;
 }
@@ -148,10 +178,11 @@
 /* Artist page image gradient */
 /* -------------------------- */
 
+[data-testid="background-image"],
 .main-view-container .before-scroll-node > * > :first-child {
     mask-image: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0)
     );
     position: absolute;
@@ -204,7 +235,9 @@
 
 /* Do not display main view when expanded library */
 #main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar))
-.Root__main-view {
+.Root__main-view,
+#main:not(:has(#Desktop_LeftSidebar_Id > .LayoutResizer__resize-bar))
+#main-view {
     display: none !important;
 }
 

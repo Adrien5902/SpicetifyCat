@@ -40,7 +40,7 @@ function refreshTheme(theme) {
     refreshLikedSongsImage(theme);
 
     const backgroundImageUrl = `https://github.com/Adrien5902/SpicetifyCat/blob/main/themes/${theme}/background.png?raw=true`;
-    waitForElement([".Root__top-container"], ([el]) => {
+    waitForElement([".Root__top-container,.Root"], ([el]) => {
         el.style.backgroundImage = `url(${encodeURI(backgroundImageUrl)})`;
     });
 }
