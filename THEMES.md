@@ -12,3 +12,6 @@
 
 # Love_is_War (Hatsune Miku) (by [@GabbaDev](https://github.com/GabbaDev))
 ![](./themes/Love_is_War/preview.png)
+
+# Raiden_Shogun (by [@Massbibim_] (https://github.com/bimofakot))
+![](./themes/Raiden_Shogun/preview.png)
